@@ -1,0 +1,309 @@
+/**
+ * @name Katsuto Kagi Theme (Rosé Pine Dawn)
+ * @description Minimal warm terminal aesthetic for Kagi
+ * @palette Based on Rosé Pine Dawn (https://rosepinetheme.com)
+ */
+
+:root {
+  /* Rosé Pine Dawn palette */
+  --dawn-base: #faf4ed;
+  --dawn-surface: #fffaf3;
+  --dawn-overlay: #f2e9e1;
+  --dawn-muted: #9893a5;
+  
+  --dawn-text: #575279;
+  --dawn-text-dim: #797593;
+  --dawn-text-muted: #9893a5;
+  
+  --dawn-rose: #d7827e;
+  --dawn-love: #b4637a;
+  --dawn-gold: #ea9d34;
+  --dawn-pine: #286983;
+  --dawn-foam: #56949f;
+  --dawn-iris: #907aa9;
+}
+
+/* === BACKGROUNDS === */
+body {
+  background-color: var(--dawn-base) !important;
+  color: var(--dawn-text) !important;
+}
+
+.app-header,
+.search-input-container,
+.auto_suggestions,
+._0_results_summary_box,
+.right-content-box #wikipediaResults:not(:empty),
+.ranked-box-wrapper.domain-info-modal,
+.k_ui_dropdown_data_list {
+  background-color: var(--dawn-surface) !important;
+}
+
+.search-result > ._0_TITLE,
+.search-result > .__sri-body {
+  background-color: var(--dawn-surface) !important;
+}
+
+/* === TEXT === */
+.__sri_title_link,
+._0_results_summary_box .doggo_head b,
+.wiki-title a,
+.d-info-domain-title,
+._0_d-info-domain-name a {
+  color: var(--dawn-text) !important;
+}
+
+.__sri-desc,
+.sr-group .__srgi-title a,
+._0_results_summary_links a,
+.wiki_desc_text {
+  color: var(--dawn-text-muted) !important;
+}
+
+#searchBar,
+.serp-nav .nav_item {
+  color: var(--dawn-text) !important;
+}
+
+/* === SEARCH BAR === */
+#searchBar {
+  background-color: var(--dawn-surface) !important;
+}
+
+#searchBar::placeholder {
+  color: var(--dawn-text-muted) !important;
+}
+
+.search-form-icons,
+.search-form-icons svg,
+.search-form-icons button {
+  color: var(--dawn-text-muted) !important;
+  background-color: transparent !important;
+}
+
+.search-form-icons svg:hover,
+.search-form-icons button:hover {
+  color: var(--dawn-rose) !important;
+}
+
+.rewrite_icon,
+.rewrite_icon svg {
+  color: var(--dawn-text-muted) !important;
+}
+
+.rewrite_icon:hover,
+.rewrite_icon:hover svg {
+  color: var(--dawn-rose) !important;
+}
+
+/* === ACCENTS === */
+
+/* Kagi logo - uses currentColor so we set color on parent */
+.logo,
+.logo svg {
+  color: var(--dawn-rose) !important;
+}
+
+.logo svg path {
+  fill: currentColor !important;
+}
+
+.app-logo .logo_kagi svg path {
+  fill: var(--dawn-rose) !important;
+}
+
+/* News 360 toggle and filter pills */
+._0_filters_panel {
+  background-color: transparent !important;
+}
+
+._0_filters_panel .filter-item,
+._0_filters_panel .dropdown,
+._0_filters_panel .dd-toggle-label,
+._0_filters_panel .dd-toggle,
+._0_lenses,
+.sidebar-filter-nav-form .filter-item,
+.sidebar-filter-nav-form .dropdown,
+.sidebar-filter-nav-form .dd-toggle-label,
+.dropdown.filter-item,
+.dropdown.filter-item .dd-toggle-label {
+  background-color: var(--dawn-overlay) !important;
+  color: var(--dawn-text) !important;
+  border-color: rgba(215, 130, 126, 0.3) !important;
+}
+
+._0_filters_panel .filter-item:hover,
+._0_filters_panel .dropdown:hover,
+._0_filters_panel .dd-toggle-label:hover,
+._0_lenses:hover,
+.sidebar-filter-nav-form .filter-item:hover,
+.sidebar-filter-nav-form .dropdown:hover,
+.dropdown.filter-item:hover,
+.dropdown.filter-item:hover .dd-toggle-label {
+  background-color: rgba(215, 130, 126, 0.2) !important;
+  border-color: var(--dawn-rose) !important;
+}
+
+._0_filters_panel .filter-item.--active,
+._0_filters_panel .dropdown.--active,
+._0_filters_panel .dd-toggle-label.--active,
+._0_lenses.--active,
+.dropdown.filter-item.--active,
+.dropdown.filter-item.--active .dd-toggle-label {
+  background-color: var(--dawn-rose) !important;
+  color: var(--dawn-base) !important;
+}
+
+/* Filter dropdown icons */
+._0_filters_panel .btn-icon,
+._0_filters_panel .btn-icon--right,
+.dropdown.filter-item .btn-icon,
+.dropdown.filter-item .btn-icon--right,
+.dd-toggle-label .btn-icon,
+.dd-toggle-label .btn-icon--right {
+  color: var(--dawn-text-muted) !important;
+}
+
+/* Dropdown text content */
+._0_filters_panel .textContent,
+.dropdown.filter-item .textContent,
+.dd-toggle-label .textContent {
+  color: var(--dawn-text) !important;
+}
+
+#searchFormSubmit {
+  color: var(--dawn-rose) !important;
+}
+
+.search-result .__sri-url-box {
+  background-color: var(--dawn-rose) !important;
+  border-color: var(--dawn-rose) !important;
+}
+
+.search-result .__sri-url-box a,
+.search-result .__sri-url-box span {
+  color: var(--dawn-base) !important;
+}
+
+._0_results_summary_content ul li::before {
+  color: var(--dawn-rose) !important;
+}
+
+._0_results_summary_links a.__0_highlight {
+  background-color: var(--dawn-rose) !important;
+  color: var(--dawn-base) !important;
+}
+
+.wiki-t-cell:first-child {
+  color: var(--dawn-rose) !important;
+}
+
+/* === BORDERS === */
+.search-input-container,
+.auto_suggestions,
+._0_results_summary_box,
+.search-result > ._0_TITLE,
+.search-result > .__sri-body,
+.sr-group,
+.right-content-box #wikipediaResults:not(:empty),
+.ranked-box-wrapper.domain-info-modal,
+.app-header {
+  border-color: rgba(215, 130, 126, 0.3) !important;
+}
+
+/* === BUTTONS & NAV === */
+.serp-nav .nav_item {
+  background-color: rgba(215, 130, 126, 0.1) !important;
+  border-color: rgba(215, 130, 126, 0.3) !important;
+}
+
+.serp-nav .nav_item:hover,
+.serp-nav .nav_item.--active {
+  background-color: rgba(215, 130, 126, 0.25) !important;
+  border-color: var(--dawn-rose) !important;
+}
+
+.auto_suggestions .auto_item.highlighted {
+  background-color: var(--dawn-rose) !important;
+  color: var(--dawn-base) !important;
+}
+
+/* === INTERACTIVE STATES === */
+a:hover,
+.sr-group .__srgi-title a:hover,
+._0_results_summary_links a:hover,
+.wiki-t-cell:last-child a:hover {
+  color: var(--dawn-rose) !important;
+}
+
+._0_summarize_link a:hover,
+._0_discuss_document_btn:hover,
+.results_summary_text_box .smw:hover,
+.right-content-box .smw:hover {
+  background-color: var(--dawn-rose) !important;
+  color: var(--dawn-base) !important;
+  border-color: var(--dawn-rose) !important;
+}
+
+/* === BUTTONS === */
+._0_summarize_link a,
+._0_discuss_document_btn,
+.results_summary_text_box .smw,
+.right-content-box .smw {
+  background-color: transparent !important;
+  border: 1px solid rgba(215, 130, 126, 0.3) !important;
+  color: var(--dawn-text-muted) !important;
+}
+
+/* === DROPDOWNS === */
+.k_ui_dropdown_data_list ._0_k_ui_dropdown_li:hover,
+.k_ui_dropdown_data_list .list_items > a:hover,
+.k_ui_dropdown_data_list .list_items > div:hover {
+  background-color: rgba(215, 130, 126, 0.2) !important;
+  color: var(--dawn-rose) !important;
+}
+
+/* === MODAL/OVERLAY === */
+.ranked-box-overlay.--open {
+  background: rgba(87, 82, 121, 0.3) !important;
+}
+
+.k_ui_btn_group input:checked + .k_ui_btn {
+  background-color: var(--dawn-rose) !important;
+}
+
+.k_ui_btn_group .k_ui_btn svg {
+  color: var(--dawn-rose) !important;
+}
+
+.k_ui_btn_group input:checked + .k_ui_btn svg {
+  color: var(--dawn-base) !important;
+}
+
+.__section-item-icon svg {
+  color: var(--dawn-rose) !important;
+}
+
+/* === WARNINGS/TRACKERS === */
+.d-info-box-title-header.--trackers,
+.d-info-box-title-header.--trackers-danger {
+  background: var(--dawn-love) !important;
+}
+
+/* === MISC CLEANUP === */
+.search-result .__sri-url-box .__domain-favicon {
+  filter: none;
+}
+
+a, a:visited {
+  text-decoration: none !important;
+}
+
+/* === LINKS (using pine for contrast on light bg) === */
+a:not(.__sri_title_link):not(._0_results_summary_links a) {
+  color: var(--dawn-pine) !important;
+}
+
+a:not(.__sri_title_link):hover {
+  color: var(--dawn-rose) !important;
+}
