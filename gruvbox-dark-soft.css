@@ -1,0 +1,312 @@
+
+/**
+ * @name Nugget Kagi Theme (Gruvbox Dark Soft)
+ * @description Minimal warm terminal aesthetic for Kagi
+ * @palette Based on Gruvbox Dark Soft
+ */
+
+:root {
+  /* Gruvbox Dark Soft palette */
+  --gruvbox-base: #32302f;
+  --gruvbox-surface: #3c3836;
+  --gruvbox-overlay: #504945;
+  --gruvbox-muted: #928374;
+
+  --gruvbox-text: #ebdbb2;
+  --gruvbox-text-dim: #d5c4a1;
+  --gruvbox-text-muted: #a89984;
+
+  --gruvbox-red: #fb4934;
+  --gruvbox-green: #b8bb26;
+  --gruvbox-yellow: #fabd2f;
+  --gruvbox-blue: #83a598;
+  --gruvbox-purple: #d3869b;
+  --gruvbox-aqua: #8ec07c;
+  --gruvbox-orange: #fe8019;
+}
+
+/* === BACKGROUNDS === */
+body {
+  background-color: var(--gruvbox-base) !important;
+  color: var(--gruvbox-text) !important;
+}
+
+.app-header,
+.search-input-container,
+.auto_suggestions,
+._0_results_summary_box,
+.right-content-box #wikipediaResults:not(:empty),
+.ranked-box-wrapper.domain-info-modal,
+.k_ui_dropdown_data_list {
+  background-color: var(--gruvbox-surface) !important;
+}
+
+.search-result > ._0_TITLE,
+.search-result > .__sri-body {
+  background-color: var(--gruvbox-surface) !important;
+}
+
+/* === TEXT === */
+.__sri_title_link,
+._0_results_summary_box .doggo_head b,
+.wiki-title a,
+.d-info-domain-title,
+._0_d-info-domain-name a {
+  color: var(--gruvbox-text) !important;
+}
+
+.__sri-desc,
+.sr-group .__srgi-title a,
+._0_results_summary_links a,
+.wiki_desc_text {
+  color: var(--gruvbox-text-muted) !important;
+}
+
+#searchBar,
+.serp-nav .nav_item {
+  color: var(--gruvbox-text) !important;
+}
+
+/* === SEARCH BAR === */
+#searchBar {
+  background-color: var(--gruvbox-surface) !important;
+}
+
+#searchBar::placeholder {
+  color: var(--gruvbox-text-muted) !important;
+}
+
+.search-form-icons,
+.search-form-icons svg,
+.search-form-icons button {
+  color: var(--gruvbox-text-muted) !important;
+  background-color: transparent !important;
+}
+
+.search-form-icons svg:hover,
+.search-form-icons button:hover {
+  color: var(--gruvbox-orange) !important;
+}
+
+.rewrite_icon,
+.rewrite_icon svg {
+  color: var(--gruvbox-text-muted) !important;
+}
+
+.rewrite_icon:hover,
+.rewrite_icon:hover svg {
+  color: var(--gruvbox-orange) !important;
+}
+
+/* === ACCENTS === */
+
+/* Kagi logo - uses currentColor so we set color on parent */
+.logo,
+.logo svg {
+  color: var(--gruvbox-orange) !important;
+}
+
+.logo svg path {
+  fill: currentColor !important;
+}
+
+.app-logo .logo_kagi svg path {
+  fill: var(--gruvbox-orange) !important;
+}
+
+/* News 360 toggle and filter pills */
+._0_filters_panel {
+  background-color: transparent !important;
+}
+
+._0_filters_panel .filter-item,
+._0_filters_panel .dropdown,
+._0_filters_panel .dd-toggle-label,
+._0_filters_panel .dd-toggle,
+._0_lenses,
+.sidebar-filter-nav-form .filter-item,
+.sidebar-filter-nav-form .dropdown,
+.sidebar-filter-nav-form .dd-toggle-label,
+.dropdown.filter-item,
+.dropdown.filter-item .dd-toggle-label {
+  background-color: var(--gruvbox-overlay) !important;
+  color: var(--gruvbox-text) !important;
+  border-color: rgba(254, 128, 25, 0.35) !important;
+}
+
+._0_filters_panel .filter-item:hover,
+._0_filters_panel .dropdown:hover,
+._0_filters_panel .dd-toggle-label:hover,
+._0_lenses:hover,
+.sidebar-filter-nav-form .filter-item:hover,
+.sidebar-filter-nav-form .dropdown:hover,
+.dropdown.filter-item:hover,
+.dropdown.filter-item:hover .dd-toggle-label {
+  background-color: rgba(254, 128, 25, 0.18) !important;
+  border-color: var(--gruvbox-orange) !important;
+}
+
+._0_filters_panel .filter-item.--active,
+._0_filters_panel .dropdown.--active,
+._0_filters_panel .dd-toggle-label.--active,
+._0_lenses.--active,
+.dropdown.filter-item.--active,
+.dropdown.filter-item.--active .dd-toggle-label {
+  background-color: var(--gruvbox-orange) !important;
+  color: var(--gruvbox-base) !important;
+}
+
+/* Filter dropdown icons */
+._0_filters_panel .btn-icon,
+._0_filters_panel .btn-icon--right,
+.dropdown.filter-item .btn-icon,
+.dropdown.filter-item .btn-icon--right,
+.dd-toggle-label .btn-icon,
+.dd-toggle-label .btn-icon--right {
+  color: var(--gruvbox-text-muted) !important;
+}
+
+/* Dropdown text content */
+._0_filters_panel .textContent,
+.dropdown.filter-item .textContent,
+.dd-toggle-label .textContent {
+  color: var(--gruvbox-text) !important;
+}
+
+#searchFormSubmit {
+  color: var(--gruvbox-orange) !important;
+}
+
+.search-result .__sri-url-box {
+  background-color: var(--gruvbox-orange) !important;
+  border-color: var(--gruvbox-orange) !important;
+}
+
+.search-result .__sri-url-box a,
+.search-result .__sri-url-box span {
+  color: var(--gruvbox-base) !important;
+}
+
+._0_results_summary_content ul li::before {
+  color: var(--gruvbox-orange) !important;
+}
+
+._0_results_summary_links a.__0_highlight {
+  background-color: var(--gruvbox-orange) !important;
+  color: var(--gruvbox-base) !important;
+}
+
+.wiki-t-cell:first-child {
+  color: var(--gruvbox-orange) !important;
+}
+
+/* === BORDERS === */
+.search-input-container,
+.auto_suggestions,
+._0_results_summary_box,
+.search-result > ._0_TITLE,
+.search-result > .__sri-body,
+.sr-group,
+.right-content-box #wikipediaResults:not(:empty),
+.ranked-box-wrapper.domain-info-modal,
+.app-header {
+  border-color: rgba(254, 128, 25, 0.35) !important;
+}
+
+/* === BUTTONS & NAV === */
+.serp-nav .nav_item {
+  background-color: rgba(254, 128, 25, 0.1) !important;
+  border-color: rgba(254, 128, 25, 0.35) !important;
+}
+
+.serp-nav .nav_item:hover,
+.serp-nav .nav_item.--active {
+  background-color: rgba(254, 128, 25, 0.25) !important;
+  border-color: var(--gruvbox-orange) !important;
+}
+
+.auto_suggestions .auto_item.highlighted {
+  background-color: var(--gruvbox-orange) !important;
+  color: var(--gruvbox-base) !important;
+}
+
+/* === INTERACTIVE STATES === */
+a:hover,
+.sr-group .__srgi-title a:hover,
+._0_results_summary_links a:hover,
+.wiki-t-cell:last-child a:hover {
+  color: var(--gruvbox-orange) !important;
+}
+
+._0_summarize_link a:hover,
+._0_discuss_document_btn:hover,
+.results_summary_text_box .smw:hover,
+.right-content-box .smw:hover {
+  background-color: var(--gruvbox-orange) !important;
+  color: var(--gruvbox-base) !important;
+  border-color: var(--gruvbox-orange) !important;
+}
+
+/* === BUTTONS === */
+._0_summarize_link a,
+._0_discuss_document_btn,
+.results_summary_text_box .smw,
+.right-content-box .smw {
+  background-color: transparent !important;
+  border: 1px solid rgba(254, 128, 25, 0.35) !important;
+  color: var(--gruvbox-text-muted) !important;
+}
+
+/* === DROPDOWNS === */
+.k_ui_dropdown_data_list ._0_k_ui_dropdown_li:hover,
+.k_ui_dropdown_data_list .list_items > a:hover,
+.k_ui_dropdown_data_list .list_items > div:hover {
+  background-color: rgba(254, 128, 25, 0.18) !important;
+  color: var(--gruvbox-orange) !important;
+}
+
+/* === MODAL/OVERLAY === */
+.ranked-box-overlay.--open {
+  background: rgba(50, 48, 47, 0.85) !important;
+}
+
+.k_ui_btn_group input:checked + .k_ui_btn {
+  background-color: var(--gruvbox-orange) !important;
+}
+
+.k_ui_btn_group .k_ui_btn svg {
+  color: var(--gruvbox-orange) !important;
+}
+
+.k_ui_btn_group input:checked + .k_ui_btn svg {
+  color: var(--gruvbox-base) !important;
+}
+
+.__section-item-icon svg {
+  color: var(--gruvbox-orange) !important;
+}
+
+/* === WARNINGS/TRACKERS === */
+.d-info-box-title-header.--trackers,
+.d-info-box-title-header.--trackers-danger {
+  background: var(--gruvbox-red) !important;
+}
+
+/* === MISC CLEANUP === */
+.search-result .__sri-url-box .__domain-favicon {
+  filter: invert(1) grayscale(1) contrast(2);
+}
+
+a,
+a:visited {
+  text-decoration: none !important;
+}
+
+/* === LINKS (using aqua for contrast on dark bg) === */
+a:not(.__sri_title_link):not(._0_results_summary_links a) {
+  color: var(--gruvbox-aqua) !important;
+}
+
+a:not(.__sri_title_link):hover {
+  color: var(--gruvbox-orange) !important;
+}
