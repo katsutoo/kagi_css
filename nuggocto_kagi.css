@@ -1,31 +1,31 @@
 /**
- * @name Nugget Kagi Theme (Simple)
- * @description Minimal warm terminal aesthetic for Kagi - colors only
- * @palette Based on Batou/Pywal colors
+ * @name Nugget Kagi Theme (Solitude)
+ * @description Muted charcoal and pastel Solitude palette for Kagi
+ * @palette Matches the customized Omarchy Solitude theme
  */
 
 :root {
-  /* Batou palette */
-  --batou-black: #121212;
-  --batou-dark: #1a1918;
-  --batou-mid: #383735;
-  --batou-grey: #605d5b;
+  /* Solitude surfaces */
+  --solitude-base: #101315;
+  --solitude-surface: #171b1d;
+  --solitude-overlay: #282d30;
+  --solitude-border: #33393d;
   
-  --batou-text: #c6c4b0;
-  --batou-text-dim: #a5a297;
-  --batou-text-muted: #8a8575;
+  --solitude-text: #d3d6d7;
+  --solitude-text-dim: #b9bec0;
+  --solitude-text-muted: #8b9397;
   
-  --batou-orange: #e19e74;
-  --batou-orange-dark: #984b1e;
-  --batou-red: #8f4445;
-  --batou-tan: #b7a798;
-  --batou-sage: #90947a;
+  --solitude-accent: #86a9c7;
+  --solitude-accent-bright: #9bbbd5;
+  --solitude-red: #d9847c;
+  --solitude-yellow: #d1b879;
+  --solitude-green: #9fbd8a;
 }
 
 /* === BACKGROUNDS === */
 body {
-  background-color: var(--batou-black) !important;
-  color: var(--batou-text) !important;
+  background-color: var(--solitude-base) !important;
+  color: var(--solitude-text) !important;
 }
 
 .app-header,
@@ -35,12 +35,12 @@ body {
 .right-content-box #wikipediaResults:not(:empty),
 .ranked-box-wrapper.domain-info-modal,
 .k_ui_dropdown_data_list {
-  background-color: var(--batou-dark) !important;
+  background-color: var(--solitude-surface) !important;
 }
 
 .search-result > ._0_TITLE,
 .search-result > .__sri-body {
-  background-color: var(--batou-dark) !important;
+  background-color: var(--solitude-surface) !important;
 }
 
 /* === TEXT === */
@@ -49,51 +49,51 @@ body {
 .wiki-title a,
 .d-info-domain-title,
 ._0_d-info-domain-name a {
-  color: var(--batou-text) !important;
+  color: var(--solitude-text) !important;
 }
 
 .__sri-desc,
 .sr-group .__srgi-title a,
 ._0_results_summary_links a,
 .wiki_desc_text {
-  color: var(--batou-text-muted) !important;
+  color: var(--solitude-text-muted) !important;
 }
 
 #searchBar,
 .serp-nav .nav_item {
-  color: var(--batou-text) !important;
+  color: var(--solitude-text) !important;
 }
 
 /* === ACCENTS === */
 .app-logo .logo_kagi svg path {
-  fill: var(--batou-orange) !important;
+  fill: var(--solitude-accent) !important;
 }
 
 #searchFormSubmit {
-  color: var(--batou-orange) !important;
+  color: var(--solitude-accent) !important;
 }
 
 .search-result .__sri-url-box {
-  background-color: var(--batou-orange) !important;
-  border-color: var(--batou-orange) !important;
+  background-color: var(--solitude-accent) !important;
+  border-color: var(--solitude-accent) !important;
 }
 
 .search-result .__sri-url-box a,
 .search-result .__sri-url-box span {
-  color: var(--batou-black) !important;
+  color: var(--solitude-base) !important;
 }
 
 ._0_results_summary_content ul li::before {
-  color: var(--batou-orange) !important;
+  color: var(--solitude-accent) !important;
 }
 
 ._0_results_summary_links a.__0_highlight {
-  background-color: var(--batou-orange) !important;
-  color: var(--batou-black) !important;
+  background-color: var(--solitude-accent) !important;
+  color: var(--solitude-base) !important;
 }
 
 .wiki-t-cell:first-child {
-  color: var(--batou-orange) !important;
+  color: var(--solitude-accent) !important;
 }
 
 /* === BORDERS === */
@@ -106,24 +106,24 @@ body {
 .right-content-box #wikipediaResults:not(:empty),
 .ranked-box-wrapper.domain-info-modal,
 .app-header {
-  border-color: rgba(225, 158, 116, 0.3) !important;
+  border-color: color-mix(in srgb, var(--solitude-accent) 30%, transparent) !important;
 }
 
 /* === BUTTONS & NAV === */
 .serp-nav .nav_item {
-  background-color: rgba(225, 158, 116, 0.1) !important;
-  border-color: rgba(225, 158, 116, 0.3) !important;
+  background-color: color-mix(in srgb, var(--solitude-accent) 10%, transparent) !important;
+  border-color: color-mix(in srgb, var(--solitude-accent) 30%, transparent) !important;
 }
 
 .serp-nav .nav_item:hover,
 .serp-nav .nav_item.--active {
-  background-color: rgba(225, 158, 116, 0.25) !important;
-  border-color: var(--batou-orange) !important;
+  background-color: color-mix(in srgb, var(--solitude-accent) 20%, transparent) !important;
+  border-color: var(--solitude-accent) !important;
 }
 
 .auto_suggestions .auto_item.highlighted {
-  background-color: var(--batou-orange) !important;
-  color: var(--batou-black) !important;
+  background-color: var(--solitude-accent) !important;
+  color: var(--solitude-base) !important;
 }
 
 /* === INTERACTIVE STATES === */
@@ -131,16 +131,16 @@ a:hover,
 .sr-group .__srgi-title a:hover,
 ._0_results_summary_links a:hover,
 .wiki-t-cell:last-child a:hover {
-  color: var(--batou-orange) !important;
+  color: var(--solitude-accent-bright) !important;
 }
 
 ._0_summarize_link a:hover,
 ._0_discuss_document_btn:hover,
 .results_summary_text_box .smw:hover,
 .right-content-box .smw:hover {
-  background-color: var(--batou-orange) !important;
-  color: var(--batou-black) !important;
-  border-color: var(--batou-orange) !important;
+  background-color: var(--solitude-accent) !important;
+  color: var(--solitude-base) !important;
+  border-color: var(--solitude-accent) !important;
 }
 
 /* === BUTTONS === */
@@ -149,43 +149,43 @@ a:hover,
 .results_summary_text_box .smw,
 .right-content-box .smw {
   background-color: transparent !important;
-  border: 1px solid rgba(225, 158, 116, 0.3) !important;
-  color: var(--batou-text-muted) !important;
+  border: 1px solid color-mix(in srgb, var(--solitude-accent) 30%, transparent) !important;
+  color: var(--solitude-text-muted) !important;
 }
 
 /* === DROPDOWNS === */
 .k_ui_dropdown_data_list ._0_k_ui_dropdown_li:hover,
 .k_ui_dropdown_data_list .list_items > a:hover,
 .k_ui_dropdown_data_list .list_items > div:hover {
-  background-color: rgba(225, 158, 116, 0.2) !important;
-  color: var(--batou-orange) !important;
+  background-color: color-mix(in srgb, var(--solitude-accent) 18%, transparent) !important;
+  color: var(--solitude-accent-bright) !important;
 }
 
 /* === MODAL/OVERLAY === */
 .ranked-box-overlay.--open {
-  background: rgba(18, 18, 18, 0.8) !important;
+  background: color-mix(in srgb, var(--solitude-base) 80%, transparent) !important;
 }
 
 .k_ui_btn_group input:checked + .k_ui_btn {
-  background-color: var(--batou-orange) !important;
+  background-color: var(--solitude-accent) !important;
 }
 
 .k_ui_btn_group .k_ui_btn svg {
-  color: var(--batou-orange) !important;
+  color: var(--solitude-accent) !important;
 }
 
 .k_ui_btn_group input:checked + .k_ui_btn svg {
-  color: var(--batou-black) !important;
+  color: var(--solitude-base) !important;
 }
 
 .__section-item-icon svg {
-  color: var(--batou-orange) !important;
+  color: var(--solitude-accent) !important;
 }
 
 /* === WARNINGS/TRACKERS === */
 .d-info-box-title-header.--trackers,
 .d-info-box-title-header.--trackers-danger {
-  background: var(--batou-red) !important;
+  background: var(--solitude-red) !important;
 }
 
 /* === MISC CLEANUP === */
